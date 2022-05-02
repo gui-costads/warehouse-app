@@ -8,3 +8,7 @@
     Área: <%= w.area %> m²
   <% end %>
 </h2>
+
+<% if @warehouses.empty?%>
+    <p>Não existem galpões cadastrados</p>
+<% end %>

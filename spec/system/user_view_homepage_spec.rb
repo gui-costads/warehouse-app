@@ -20,6 +20,7 @@ describe 'Usario visita tela inicial' do
     #Act
     visit('/')
     #Assert
+    expect(page).not_to have_content('Não existem galpões cadastrados')
     expect(page).to have_content('Nome: São Luis')
     expect(page).to have_content('Código: SLZ')
     expect(page).to have_content('Cidade: São Luis')
@@ -29,6 +30,15 @@ describe 'Usario visita tela inicial' do
     expect(page).to have_content('Código: RIO')
     expect(page).to have_content('Cidade: Rio de Janeiro')
     expect(page).to have_content('Área: 70000 m²')
+  end
 
+  it 'e não existem galpões cadastrados' do
+    #Arrange
+
+    #Act
+    visit('/')
+
+    #Assert
+    expect(page).to have_content('Não existem galpões cadastrados')
   end
 end
