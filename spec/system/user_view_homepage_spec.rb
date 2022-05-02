@@ -10,4 +10,25 @@ describe 'Usario visita tela inicial' do
     #Assert
     expect(page).to have_content('Galpões e Estoque')
   end
+
+  it 'e vê os galpões cadastrados' do
+    #Arrange
+    #cadastrar 2 galpões: São Luis e São paulo
+    Warehouse.create(name: 'São Luis', code: 'SLZ',  city: 'São Luis', area: 50_000)
+    Warehouse.create(name: 'Rio', code: 'RIO',  city: 'Rio de Janeiro', area: 70_000)
+
+    #Act
+    visit('/')
+    #Assert
+    expect(page).to have_content('Nome: São Luis')
+    expect(page).to have_content('Código: SLZ')
+    expect(page).to have_content('Cidade: São Luis')
+    expect(page).to have_content('Área: 50000 m²')
+
+    expect(page).to have_content('Nome: Rio')
+    expect(page).to have_content('Código: RIO')
+    expect(page).to have_content('Cidade: Rio de Janeiro')
+    expect(page).to have_content('Área: 70000 m²')
+
+  end
 end
