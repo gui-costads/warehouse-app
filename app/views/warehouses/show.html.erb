@@ -1,10 +1,21 @@
 <h1>Galpão <%= @warehouse.code%></h1>
 
-<h2>Nome: <%= @warehouse.name%></h2>
-<h2>Cidade: <%= @warehouse.city%></h2>
-<h2>Área: <%= @warehouse.area%> m²</h2>
-<h2>Endereço: <%= @warehouse.address%>, CEP: <%= @warehouse.cep%></h2>
-<h2><%= @warehouse.description%></h2>
-
-<%= link_to('Voltar', '/')%>
+<section>
+  <div>
+    <dl>
+      <dt>Nome:</dt>
+      <dd><%= @warehouse.name%></dd>
+      <dt>Código:</dt>
+      <dd><%= @warehouse.code%></dd>
+      <dt>Cidade:</dt>
+      <dd><%= @warehouse.city%></dd>
+      <dt>Área:</dt>
+      <dd><%= @warehouse.area%> m²</dd>
+      <dt>Endereço: </dt>
+      <dd><%= @warehouse.address%>, CEP: <%= @warehouse.cep%></dd>
+      <h2><%= @warehouse.description%></h2>
+    </dl>
+  </div>
+</section>
+<%= link_to('Voltar', root_path)%>
 
