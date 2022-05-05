@@ -34,6 +34,7 @@ describe 'Usuário cadastra novo galpão' do
 		
 		#Assert
 		expect(current_path).to eq root_path
+		expect(page).to have_content('Galpão cadastrado com sucesso!')
 		expect(page).to have_content('Brasília')
 		expect(page).to have_content('BSB')
 		expect(page).to have_content('Brasília')

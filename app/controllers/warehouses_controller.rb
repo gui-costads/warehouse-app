@@ -12,6 +12,7 @@ class WarehousesController < ApplicationController
 			new_warehouse = Warehouse.new(warehouse_params)
 			new_warehouse.save()
 
+			flash[:notice] = "Galpão cadastrado com sucesso!"
 			redirect_to root_path
 		end
 end
