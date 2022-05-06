@@ -1,10 +1,6 @@
 <h1>Galpões e Estoque</h1>
 
 <div>
-   <%= flash[:notice] %>
-</div>
-
-<div>
   <% @warehouses.each do |w| %>
   <dl>
    <strong> Nome: <%= link_to(w.name, warehouse_path(w.id))%></a></strong>

@@ -40,4 +40,17 @@ describe 'Usuário cadastra novo galpão' do
 		expect(page).to have_content('Brasília')
 		expect(page).to have_content('30000')
 	end
+	it 'sem sucesso' do
+		#Arrange
+
+		#Act
+		visit root_path
+		click_on 'Cadastrar Galpão'
+		fill_in 'Nome', with: ''
+		fill_in 'Código', with:''
+		click_on 'Salvar'
+
+		#Assert
+		expect(page).to have_content 'Galpão não cadastrado!'
+	end
 end
