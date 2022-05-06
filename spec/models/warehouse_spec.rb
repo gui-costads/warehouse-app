@@ -93,5 +93,17 @@ RSpec.describe Warehouse, type: :model do
 			#Assert
 			expect(result).to eq false
 		end
+
+		it 'verdadeiro quando Cep está no formato xxxxx-xxx' do
+			#Arrange
+			warehouse = Warehouse.new(name: 'São Luis', code: 'SLZ', city: 'São Luis', address: 'São Luis',
+				cep: '65000-000', area: 50000, description: 'Galpão slz')
+			
+				#Act
+			result = warehouse.valid?
+			
+			#Assert
+			expect(result).to eq true
+		end
 	end
 end
