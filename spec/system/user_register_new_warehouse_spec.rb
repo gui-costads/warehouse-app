@@ -9,13 +9,13 @@ describe 'Usuário cadastra novo galpão' do
 		click_on 'Cadastrar Galpão'
 
 		#Assert
-		expect(page).to have_content('Nome')
-		expect(page).to have_content('Código')
-		expect(page).to have_content('Cidade')
-		expect(page).to have_content('Área')
-		expect(page).to have_content('Endereço')
-		expect(page).to have_content('Cep')
-		expect(page).to have_content('Descrição')
+		expect(page).to have_field('Nome')
+		expect(page).to have_field('Código')
+		expect(page).to have_field('Cidade')
+		expect(page).to have_field('Área')
+		expect(page).to have_field('Endereço')
+		expect(page).to have_field('Cep')
+		expect(page).to have_field('Descrição')
 	end  
 	it 'com sucesso' do
 		#Arrange
@@ -52,5 +52,14 @@ describe 'Usuário cadastra novo galpão' do
 
 	#Assert
 	expect(page).to have_content 'Galpão não cadastrado!'
+	expect(page).to have_content 'Nome não pode ficar em branco'
+	expect(page).to have_content 'Código não pode ficar em branco'
+	expect(page).to have_content 'Cidade não pode ficar em branco'
+	expect(page).to have_content 'Área não pode ficar em branco'
+	expect(page).to have_content 'Endereço não pode ficar em branco'
+	expect(page).to have_content 'Cep não pode ficar em branco'
+	expect(page).to have_content 'Descrição não pode ficar em branco'
+	expect(page).to have_content 'Cep Formato deve ser: xxxxx-xxx'
+
 	end
 end

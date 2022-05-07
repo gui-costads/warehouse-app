@@ -1,4 +1,4 @@
-<h1>Cadastrando Galpão</h1>
+<h1>Editar Galpão</h1>
 
 <% if(@warehouse.errors.any?) %>
 	<ul>
@@ -10,30 +10,30 @@
 
 <%= form_with(model: @warehouse) do |form| %>
 	<div>
-		<%= form.label :name, 'Nome'%>
+		<%= form.label :name%>
 		<%= form.text_field :name%>
 	</div>
 	<div>
-		<%= form.label :code, 'Código'%>
+		<%= form.label :code%>
 		<%= form.text_field :code%>
 	</div>
 	<div>
-		<%= form.label :city, 'Cidade'%>
+		<%= form.label :city%>
 		<%= form.text_field :city%>
 	<div>
-		<%= form.label :area, 'Área'%>
+		<%= form.label :area %>
 		<%= form.text_field :area%>
 	</div>
 	<div>
-		<%= form.label :address, 'Endereço'%>
+		<%= form.label :address %>
 		<%= form.text_field :address%>
 	</div>
 	<div>
-		<%= form.label :cep, 'Cep'%>
+		<%= form.label :cep %>
 		<%= form.text_field :cep%>
 	</div>
 	<div>
-		<%= form.label :description, 'Descrição'%>
+		<%= form.label :description %>
 		<%= form.text_area :description%>
 	</div>
 	<div>
