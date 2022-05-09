@@ -18,7 +18,6 @@ describe 'Usuário edita galpão registrado' do
 		expect(page).to have_field('Endereço', with:'Av holandeses, numero 1000')	
 		expect(page).to have_field('Cep', with: '65000-000')	
 		expect(page).to have_field('Descrição', with: 'Galpão de São Luis')	
-
 	end
 
 	it 'com  sucesso' do
@@ -33,6 +32,7 @@ describe 'Usuário edita galpão registrado' do
 		fill_in 'Código', with: 'slz'
 		fill_in 'Área', with: '30000'
 		click_on 'Salvar'
+
 		#Assert
 		expect(page).to have_content('Galpão atualizdo com sucesso!')
 		expect(page).to have_content('Nome: São Luís')

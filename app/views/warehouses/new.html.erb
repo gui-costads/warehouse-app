@@ -1,42 +1,4 @@
 <h1>Cadastrando Galpão</h1>
 
-<% if(@warehouse.errors.any?) %>
-	<ul>
-	<% @warehouse.errors.full_messages.each do | msg| %>
-		<li><%= msg %> </li>
-	<% end %>
-	</ul>
-<% end %>
+<%= render 'form' %>
 
-<%= form_with(model: @warehouse) do |form| %>
-	<div>
-		<%= form.label :name, 'Nome'%>
-		<%= form.text_field :name%>
-	</div>
-	<div>
-		<%= form.label :code, 'Código'%>
-		<%= form.text_field :code%>
-	</div>
-	<div>
-		<%= form.label :city, 'Cidade'%>
-		<%= form.text_field :city%>
-	<div>
-		<%= form.label :area, 'Área'%>
-		<%= form.text_field :area%>
-	</div>
-	<div>
-		<%= form.label :address, 'Endereço'%>
-		<%= form.text_field :address%>
-	</div>
-	<div>
-		<%= form.label :cep, 'Cep'%>
-		<%= form.text_field :cep%>
-	</div>
-	<div>
-		<%= form.label :description, 'Descrição'%>
-		<%= form.text_area :description%>
-	</div>
-	<div>
-		<%= form.submit 'Salvar'%>
-	</div>
-<% end %>

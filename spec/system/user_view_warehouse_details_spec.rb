@@ -7,8 +7,6 @@ describe 'Usuário vê detalhes de um galpão' do
                     address: 'Avenida do Aeroporto, 1000', cep: '15000-000',
                     description: 'Galpão destinado para cargas internacionais')
 
-
-
    #Act
    visit(root_path)
    click_on('Aeroporto SP')
@@ -20,7 +18,6 @@ describe 'Usuário vê detalhes de um galpão' do
     expect(page).to have_content('Área: 100000 m²')
     expect(page).to have_content('Endereço: Avenida do Aeroporto, 1000, CEP: 15000-000')
     expect(page).to have_content('Galpão destinado para cargas internacionais')
-
   end
 
   it 'e volta para tela inicial' do
@@ -37,5 +34,4 @@ describe 'Usuário vê detalhes de um galpão' do
     #Assert
     expect(current_path).to eq(root_path)
   end
-
 end

@@ -60,6 +60,5 @@ describe 'Usuário cadastra novo galpão' do
 	expect(page).to have_content 'Cep não pode ficar em branco'
 	expect(page).to have_content 'Descrição não pode ficar em branco'
 	expect(page).to have_content 'Cep Formato deve ser: xxxxx-xxx'
-
 	end
 end
