@@ -13,10 +13,11 @@ describe 'Usuário vê fornecedores' do
 		expect(current_path).to eq suppliers_path
 	end		
 
-	it 'e vê galpões cadastrados' do
+	it 'e vê fornecedores cadastrados' do
 	  #Arrange
 		Supplier.create!(trade_name: 'Samsung', company_name: 'Samsung Company', registration_number: '1234567891234',
-										address: 'Avenida Coreia do Sul, numero 1000', email: 'samsung@email.com', phone_number: '999839823')
+										city: 'SP', state: 'São Paulo', address: 'Avenida Coreia do Sul, numero 1000', 
+										email: 'samsung@email.com', phone_number: '999839823')
 		#Act
 		visit root_path
 		within('nav') do
@@ -29,7 +30,7 @@ describe 'Usuário vê fornecedores' do
 		expect(page).to have_content('1234567891234')
 	end
 
-	it 'e não existem galpões cadastrados' do 
+	it 'e não existem fornecedores cadastrados' do 
 		#Arrange
 		
 		#Act

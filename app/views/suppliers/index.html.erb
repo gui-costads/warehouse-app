@@ -1,12 +1,25 @@
 
 <% if @suppliers.any?%>
-	<div>
-	<%= @suppliers.each do |s|%>
-		<%= s.trade_name%>
-		<%= s.company_name%>
-		<%= s.registration_number%>
+	<table>
+	<thead>
+	<tr>
+		<th>Nome Fantasia </th>
+		<th> Razão Social </th>
+		<th> CNPJ </th>		
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+	<% @suppliers.each do |s|%>
+		
+		<td><%= link_to s.trade_name, supplier_path(s.id) %></td>
+		<td><%= s.company_name %></td>
+		<td><%= s.registration_number %></td>	
+	</tr>
 	<%end%>
-	</div>
+	
+	</tbody>
+	</table>
 <% else %>
   <p>Não existem Fornecedores cadastrados!</p>
 

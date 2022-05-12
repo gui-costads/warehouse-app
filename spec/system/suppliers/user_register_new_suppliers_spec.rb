@@ -16,6 +16,8 @@ describe 'Usuário cadastra novo fornecedor' do
 		expect(page).to have_content('Razão Social')
 		expect(page).to have_content('CNPJ')
 		expect(page).to have_content('Endereço')
+		expect(page).to have_content('Cidade')
+		expect(page).to have_content('Estado')
 		expect(page).to have_content('Email')
 		expect(page).to have_content('Telefone')
 		end
@@ -33,6 +35,8 @@ describe 'Usuário cadastra novo fornecedor' do
 		fill_in 'Razão Social', with: 'Samsung Eletronics'
 		fill_in 'CNPJ', with: '1234567891234'
 		fill_in 'Endereço', with: 'Av Coreia do Sul, numero 1000'
+		fill_in 'Cidade', with: 'SP'
+		fill_in 'Estado', with: 'São Paulo'
 		fill_in 'Email', with: 'Samsung@samsung.com'
 		fill_in 'Telefone', with: '559278123021'
 		click_on 'Salvar'
@@ -55,6 +59,8 @@ describe 'Usuário cadastra novo fornecedor' do
 		fill_in 'Nome Fantasia', with: ''
 		fill_in 'Razão Social', with: ' '
 		fill_in 'CNPJ', with: ''
+		fill_in 'Cidade', with: 'SP'
+		fill_in 'Estado', with: 'São Paulo'
 		fill_in 'Endereço', with: 'Av Coreia do Sul, numero 1000'
 		fill_in 'Email', with: ''
 		fill_in 'Telefone', with: '559278123021'

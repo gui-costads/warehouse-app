@@ -6,12 +6,12 @@
 <div>
   <% @warehouses.each do |w| %>
   <dl>
-   <strong> Nome: <%= link_to(w.name, warehouse_path(w.id))%></a></strong>
+   <strong> Nome: <%= link_to(w.name, warehouse_path(w.id))%></strong>
    <strong> Código: <%= w.code%></strong>
    <strong> Cidade: <%= w.city%></strong>
    <strong>Área: <%= w.area %> m²</strong>
   <% end %>
   </dl>
 </div>
-
+<div>
 <%= link_to('Cadastrar Galpão', new_warehouse_path)%>

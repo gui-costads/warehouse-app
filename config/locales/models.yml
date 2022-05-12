@@ -19,4 +19,5 @@ pt-BR:
         address: "Endereço"
         email: "Email"
         phone_number: "Telefone"
-        
+        city: "Cidade"
+        state: "Estado"

@@ -1,0 +1,27 @@
+ <h2><%=@supplier.trade_name %></h2>
+<section>
+  <div>
+    <dl>
+      <dt>Nome Fantasia:</dt>
+      <dd><%= @supplier.trade_name%></dd>
+      <dt>Razão Social:</dt>
+      <dd><%= @supplier.company_name%></dd>
+      <dt>CNPJ:</dt>
+      <dd><%= @supplier.registration_number%></dd>
+      <dt>Estado</dt>
+      <dd><%= @supplier.state%></dd>
+      <dt>Cidade</dt>
+      <dd><%= @supplier.city%></dd>
+      <dt>Endereço</dt>
+      <dd><%= @supplier.address%></dd>
+      <dt>email:</dt>
+      <dd><%= @supplier.email%> m²</dd>
+      <dt>Telefone: </dt>
+      <dd><%= @supplier.phone_number%></dd>
+    </dl>
+  </div>
+</section>
+
+<div>
+<%= link_to('Voltar para Galpões', root_path)%>
+</div>
