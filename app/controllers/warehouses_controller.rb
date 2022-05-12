@@ -34,7 +34,6 @@ class WarehousesController < ApplicationController
 		@warehouse.destroy
 		redirect_to root_path
 		flash[:notice] = 'Galpão removido com sucesso!'
-		
 	end
 
 	private
@@ -44,7 +43,7 @@ class WarehousesController < ApplicationController
 	end
 
 	def warehouse_params
-				warehouse_params = params.require(:warehouse).permit(:name, :code, :city, :area, 
-																									 					 :address, :cep, :description)
+		warehouse_params = params.require(:warehouse).permit(:name, :code, :city, :area, 
+																     :address, :postal_code, :description)
 	end
 end

@@ -1,0 +1,15 @@
+
+<% if @suppliers.any?%>
+	<div>
+	<%= @suppliers.each do |s|%>
+		<%= s.trade_name%>
+		<%= s.company_name%>
+		<%= s.registration_number%>
+	<%end%>
+	</div>
+<% else %>
+  <p>Não existem Fornecedores cadastrados!</p>
+
+<% end %>
+
+<%= link_to 'Cadastrar Fornecedor', new_supplier_path%>

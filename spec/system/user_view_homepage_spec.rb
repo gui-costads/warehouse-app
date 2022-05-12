@@ -14,8 +14,8 @@ describe 'Usario visita tela inicial' do
   it 'e vê os galpões cadastrados' do
     #Arrange
     #cadastrar 2 galpões: São Luis e São paulo
-    Warehouse.create(name: 'São Luis', code: 'SLZ',  city: 'São Luis', area: 50_000, address: 'Av holandeses, numero 1000', cep: '65000-000', description: 'Galpão de São Luis')
-    Warehouse.create(name: 'Rio', code: 'RIO',  city: 'Rio de Janeiro', area: 70_000, address: 'Av principal, numero 1000', cep: '31000-000', description: 'Galpão principal do Rio de Janeiro')
+    Warehouse.create(name: 'São Luis', code: 'SLZ',  city: 'São Luis', area: 50_000, address: 'Av holandeses, numero 1000', postal_code: '65000-000', description: 'Galpão de São Luis')
+    Warehouse.create(name: 'Rio', code: 'RIO',  city: 'Rio de Janeiro', area: 70_000, address: 'Av principal, numero 1000', postal_code: '31000-000', description: 'Galpão principal do Rio de Janeiro')
 
     #Act
     visit root_path
@@ -41,4 +41,5 @@ describe 'Usario visita tela inicial' do
     #Assert
     expect(page).to have_content('Não existem galpões cadastrados')
   end
+
 end

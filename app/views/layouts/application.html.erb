@@ -8,8 +8,13 @@
 
     <%= stylesheet_link_tag "application" %>
   </head>
-
+  
   <body>
+    <header>
+      <nav>
+        <%= link_to 'Fornecedores', suppliers_path %>
+      </nav>
+    </header>
     <main>
      <div>
       <%= flash[:notice] %>

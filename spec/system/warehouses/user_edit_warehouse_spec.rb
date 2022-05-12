@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Usuário edita galpão registrado' do
   it 'a partir da pagina detalhes' do
 		#Arrange
-		Warehouse.create(name: 'São Luis', code: 'SLZ',  city: 'São Luis', area: 50_000, address: 'Av holandeses, numero 1000', cep: '65000-000', description: 'Galpão de São Luis')
+		Warehouse.create(name: 'São Luis', code: 'SLZ',  city: 'São Luis', area: 50_000, address: 'Av holandeses, numero 1000', postal_code: '65000-000', description: 'Galpão de São Luis')
 
 		#Act
 		visit root_path
@@ -22,7 +22,7 @@ describe 'Usuário edita galpão registrado' do
 
 	it 'com  sucesso' do
 		#Arrange
-		Warehouse.create(name: 'São Luis', code: 'SLZ',  city: 'São Luis', area: 50_000, address: 'Av holandeses, numero 1000', cep: '65000-000', description: 'Galpão de São Luis')
+		Warehouse.create(name: 'São Luis', code: 'SLZ',  city: 'São Luis', area: 50_000, address: 'Av holandeses, numero 1000', postal_code: '65000-000', description: 'Galpão de São Luis')
 
 		#Act
 		visit root_path
@@ -40,13 +40,13 @@ describe 'Usuário edita galpão registrado' do
 		expect(page).to have_content('Cidade: São Luis')	
 		expect(page).to have_content('Área: 30000')	
 		expect(page).to have_content('Endereço: Av holandeses, numero 1000')	
-		expect(page).to have_content('CEP: 65000-000')	
+		expect(page).to have_content('Cep: 65000-000')	
 		expect(page).to have_content('Galpão de São Luis')	
 	end
 
 	it 'sem sucesso e mantém os campos obrigatórios' do
 		#Arrange
-		Warehouse.create(name: 'São Luis', code: 'SLZ',  city: 'São Luis', area: 50_000, address: 'Av holandeses, numero 1000', cep: '65000-000', description: 'Galpão de São Luis')
+		Warehouse.create(name: 'São Luis', code: 'SLZ',  city: 'São Luis', area: 50_000, address: 'Av holandeses, numero 1000', postal_code: '65000-000', description: 'Galpão de São Luis')
 
 		#Act
 		visit root_path

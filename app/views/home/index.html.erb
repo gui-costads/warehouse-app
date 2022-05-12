@@ -1,5 +1,8 @@
 <h1>Galpões e Estoque</h1>
 
+<% if @warehouses.empty?%>
+    <p>Não existem galpões cadastrados</p>
+<% end %>
 <div>
   <% @warehouses.each do |w| %>
   <dl>
@@ -10,7 +13,5 @@
   <% end %>
   </dl>
 </div>
-<% if @warehouses.empty?%>
-    <p>Não existem galpões cadastrados</p>
-<% end %>
+
 <%= link_to('Cadastrar Galpão', new_warehouse_path)%>
