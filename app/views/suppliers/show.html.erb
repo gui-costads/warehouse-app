@@ -8,20 +8,22 @@
       <dd><%= @supplier.company_name%></dd>
       <dt>CNPJ:</dt>
       <dd><%= @supplier.registration_number%></dd>
-      <dt>Estado</dt>
+      <dt>Estado:</dt>
       <dd><%= @supplier.state%></dd>
-      <dt>Cidade</dt>
+      <dt>Cidade:</dt>
       <dd><%= @supplier.city%></dd>
-      <dt>Endereço</dt>
+      <dt>Endereço:</dt>
       <dd><%= @supplier.address%></dd>
-      <dt>email:</dt>
+      <dt>Email:</dt>
       <dd><%= @supplier.email%> m²</dd>
-      <dt>Telefone: </dt>
+      <dt>Telefone:</dt>
       <dd><%= @supplier.phone_number%></dd>
     </dl>
   </div>
+  <%= link_to 'Editar Fornecedor', edit_supplier_path %>
 </section>
 
+
 <div>
-<%= link_to('Voltar para Galpões', root_path)%>
+<%= link_to 'Voltar para Galpões', root_path %>
 </div>

@@ -9,6 +9,7 @@ describe 'Usuário vê fornecedores' do
 		within('nav') do
 			click_on 'Fornecedores'
 		end
+    
 		#Assert
 		expect(current_path).to eq suppliers_path
 	end		
@@ -18,11 +19,13 @@ describe 'Usuário vê fornecedores' do
 		Supplier.create!(trade_name: 'Samsung', company_name: 'Samsung Company', registration_number: '1234567891234',
 										city: 'SP', state: 'São Paulo', address: 'Avenida Coreia do Sul, numero 1000', 
 										email: 'samsung@email.com', phone_number: '999839823')
+
 		#Act
 		visit root_path
 		within('nav') do
 			click_on 'Fornecedores'	
 		end
+  
 		#Assert
 		expect(current_path).to eq suppliers_path
 		expect(page).to have_content('Samsung')
@@ -38,6 +41,7 @@ describe 'Usuário vê fornecedores' do
 		within('nav') do
 			click_on 'Fornecedores'	
 		end
+
 		#Assert
 		expect(current_path).to eq suppliers_path
 		expect(page).to have_content('Não existem Fornecedores cadastrados!')

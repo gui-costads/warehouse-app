@@ -41,24 +41,24 @@ describe 'Usuário cadastra novo galpão' do
 		expect(page).to have_content('30000')
 	end
 	it 'sem sucesso' do
-	#Arrange
+		#Arrange
 
-	#Act
-	visit root_path
-	click_on 'Cadastrar Galpão'
-	fill_in 'Nome', with: ''
-	fill_in 'Código', with:''
-	click_on 'Salvar'
+		#Act
+		visit root_path
+		click_on 'Cadastrar Galpão'
+		fill_in 'Nome', with: ''
+		fill_in 'Código', with:''
+		click_on 'Salvar'
 
-	#Assert
-	expect(page).to have_content 'Galpão não cadastrado!'
-	expect(page).to have_content 'Nome não pode ficar em branco'
-	expect(page).to have_content 'Código não pode ficar em branco'
-	expect(page).to have_content 'Cidade não pode ficar em branco'
-	expect(page).to have_content 'Área não pode ficar em branco'
-	expect(page).to have_content 'Endereço não pode ficar em branco'
-	expect(page).to have_content 'Cep não pode ficar em branco'
-	expect(page).to have_content 'Descrição não pode ficar em branco'
-	expect(page).to have_content 'Cep Formato deve ser: xxxxx-xxx'
+		#Assert
+		expect(page).to have_content 'Galpão não cadastrado!'
+		expect(page).to have_content 'Nome não pode ficar em branco'
+		expect(page).to have_content 'Código não pode ficar em branco'
+		expect(page).to have_content 'Cidade não pode ficar em branco'
+		expect(page).to have_content 'Área não pode ficar em branco'
+		expect(page).to have_content 'Endereço não pode ficar em branco'
+		expect(page).to have_content 'Cep não pode ficar em branco'
+		expect(page).to have_content 'Descrição não pode ficar em branco'
+		expect(page).to have_content 'Cep Formato deve ser: xxxxx-xxx'
 	end
 end

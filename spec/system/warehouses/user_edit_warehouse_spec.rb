@@ -44,7 +44,7 @@ describe 'Usuário edita galpão registrado' do
 		expect(page).to have_content('Galpão de São Luis')	
 	end
 
-	it 'sem sucesso e mantém os campos obrigatórios' do
+	it 'sem sucesso e mantém os campos preenchidos' do
 		#Arrange
 		Warehouse.create(name: 'São Luis', code: 'SLZ',  city: 'São Luis', area: 50_000, address: 'Av holandeses, numero 1000', postal_code: '65000-000', description: 'Galpão de São Luis')
 
@@ -59,5 +59,8 @@ describe 'Usuário edita galpão registrado' do
 		
 		#Assert
 		expect(page).to have_content('Não foi possível atualizar!')
+		expect(page).to have_content 'Nome não pode ficar em branco'
+		expect(page).to have_content 'Código não pode ficar em branco'
+		expect(page).to have_content 'Área não pode ficar em branco'
 	end
 end

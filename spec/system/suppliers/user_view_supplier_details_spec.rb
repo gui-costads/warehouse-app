@@ -37,8 +37,8 @@ describe 'Usuário vê detalhes de um fornecedor' do
 		expect(current_path).to  eq suppliers_path
 	end
 	it 'e volta para tela inicial' do
-	#Arrange
-	Supplier.create!(trade_name: 'Samsung', company_name: 'Samsung Company', registration_number: '1234567891234',
+		#Arrange
+		Supplier.create!(trade_name: 'Samsung', company_name: 'Samsung Company', registration_number: '1234567891234',
 		city: 'SP', state: 'São Paulo', address: 'Avenida Coreia do Sul, numero 1000', 
 		email: 'samsung@email.com', phone_number: '999839823')
 		
