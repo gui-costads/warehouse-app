@@ -10,7 +10,7 @@ describe 'Usuário cadastra novo fornecedor' do
 			click_on 'Fornecedores'	
 		end
 		click_on 'Cadastrar Fornecedor'
-
+		
 		#Assert
 		expect(page).to have_content('Nome Fantasia')
 		expect(page).to have_content('Razão Social')

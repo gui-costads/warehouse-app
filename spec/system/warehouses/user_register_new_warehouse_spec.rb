@@ -17,6 +17,7 @@ describe 'Usuário cadastra novo galpão' do
 		expect(page).to have_field('Cep')
 		expect(page).to have_field('Descrição')
 	end  
+	
 	it 'com sucesso' do
 		#Arrange
 
@@ -40,6 +41,7 @@ describe 'Usuário cadastra novo galpão' do
 		expect(page).to have_content('Brasília')
 		expect(page).to have_content('30000')
 	end
+
 	it 'sem sucesso' do
 		#Arrange
 

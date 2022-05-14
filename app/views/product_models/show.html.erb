@@ -1,0 +1,27 @@
+ <h2><%=@product_model.supplier.trade_name %></h2>
+
+<section>
+  <div>
+    <dl>
+      <dt>Nome:</dt>
+      <dd><%= @product_model.name%></dd>
+      <dt>Peso:</dt>
+      <dd><%= @product_model.weight%></dd>
+      <dt>Altura:</dt>
+      <dd><%= @product_model.height%></dd>
+      <dt>Largura:</dt>
+      <dd><%= @product_model.width%></dd>
+      <dt>Profundidade:</dt>
+      <dd><%= @product_model.depth%></dd>
+      <dt>SKU:</dt>
+      <dd><%= @product_model.sku%></dd>
+    
+    </dl>
+
+<div>
+<%= link_to 'Editar Modelo', edit_product_model_path %>
+</div>
+
+<div>
+<%= link_to 'Voltar para Galpões', root_path %>
+</div>
